@@ -11,4 +11,6 @@
  */
 module com.bloogefest.annotation {
 
+    exports com.bloogefest.annotation.analysis;
+
 }
