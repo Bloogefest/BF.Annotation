@@ -18,6 +18,4 @@ import java.lang.annotation.*;
 @Target({ElementType.FIELD, ElementType.PARAMETER, ElementType.LOCAL_VARIABLE, ElementType.TYPE_USE,
          ElementType.RECORD_COMPONENT})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface NotNls {
-
-}
+public @interface NotNls {}
