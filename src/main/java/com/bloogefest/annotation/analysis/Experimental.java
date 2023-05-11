@@ -20,6 +20,4 @@ import java.lang.annotation.*;
          ElementType.LOCAL_VARIABLE, ElementType.ANNOTATION_TYPE, ElementType.PACKAGE, ElementType.TYPE_PARAMETER,
          ElementType.TYPE_USE, ElementType.MODULE, ElementType.RECORD_COMPONENT})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Experimental {
-
-}
+public @interface Experimental {}
