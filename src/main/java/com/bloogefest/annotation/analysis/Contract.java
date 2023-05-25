@@ -124,7 +124,7 @@ public @interface Contract {
      * @apiNote Позволяет проанализировать контракт и получить обобщённое описание поведения метода или конструктора.
      * @since 1.0.0-RC1
      */
-    String value() default "";
+    @Contract("-> const") @NotNull String value() default "";
 
     /**
      * Возвращает логическое представление чистоты контракта.
@@ -134,6 +134,6 @@ public @interface Contract {
      * @apiNote Позволяет определить наличие изменения внешнего состояния поведением метода или конструктора.
      * @since 1.0.0-RC1
      */
-    boolean pure() default true;
+    @Contract("-> const") @NotNull boolean pure() default true;
 
 }
