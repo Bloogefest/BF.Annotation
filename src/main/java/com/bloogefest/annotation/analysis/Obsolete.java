@@ -9,11 +9,10 @@ package com.bloogefest.annotation.analysis;
 import java.lang.annotation.*;
 
 /**
- * Аннотация чего-то устаревшего.
+ * Устаревшее состояние чего-то.
  *
- * @apiNote Наличие этой аннотации у чего-то говорит о том, что оно устарело, не рекомендуется к использованию и может
- * быть удалено.
- * @since 1.0.0
+ * @apiNote Позволяет подчеркнуть, что что-то устарело, не рекомендуется к использованию и может быть удалено.
+ * @since 1.0.0-RC1
  */
 @Documented
 @Target({ElementType.TYPE, ElementType.FIELD, ElementType.METHOD, ElementType.PARAMETER, ElementType.CONSTRUCTOR,
@@ -23,11 +22,11 @@ import java.lang.annotation.*;
 public @interface Obsolete {
 
     /**
-     * Содержит полный путь до альтернативы, которая хотя бы немного заменяет это.
+     * Возвращает полную ссылку на альтернативу чего-то, которой можно это заменить.
      *
-     * @return Полный путь до альтернативы, которая хотя бы немного заменяет это.
+     * @return Полная ссылка на альтернативу чего-то, которой можно это заменить.
      *
-     * @since 1.0.0
+     * @since 1.0.0-RC1
      */
     String value() default "";
 
