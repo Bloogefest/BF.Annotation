@@ -9,11 +9,11 @@ package com.bloogefest.annotation.analysis;
 import java.lang.annotation.*;
 
 /**
- * Аннотация чего-то экспериментального.
+ * Экспериментальное состояние чего-то.
  *
- * @apiNote Наличие этой аннотации у чего-то говорит о том, что оно ещё в разработке и может быть переименовано,
+ * @apiNote Позволяет подчеркнуть, что что-то находится в процессе разработки, отлаживания и может быть переименовано,
  * перемещено или вовсе удалено.
- * @since 1.0.0
+ * @since 1.0.0-RC1
  */
 @Documented
 @Target({ElementType.TYPE, ElementType.FIELD, ElementType.METHOD, ElementType.PARAMETER, ElementType.CONSTRUCTOR,
