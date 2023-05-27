@@ -20,4 +20,15 @@ import java.lang.annotation.*;
          ElementType.LOCAL_VARIABLE, ElementType.ANNOTATION_TYPE, ElementType.PACKAGE, ElementType.TYPE_PARAMETER,
          ElementType.TYPE_USE, ElementType.MODULE, ElementType.RECORD_COMPONENT})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Experimental {}
+public @interface Experimental {
+
+    /**
+     * Возвращает идентификатор выпуска, в котором ожидается, что состояние чего-то будет изменено.
+     *
+     * @return Идентификатор выпуска, в котором ожидается, что состояние чего-то будет изменено.
+     *
+     * @since 2.1.0-RC1
+     */
+    @Contract("-> const") String value() default "";
+
+}
