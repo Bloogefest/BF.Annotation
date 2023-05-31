@@ -7,6 +7,6 @@
 /**
  * Содержит аннотации общего назначения.
  *
- * @since 1.0.0
+ * @since 1.0.0-RC1
  */
 package com.bloogefest.annotation;
