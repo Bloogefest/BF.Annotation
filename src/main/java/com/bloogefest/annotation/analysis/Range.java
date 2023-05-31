@@ -51,7 +51,7 @@ public @interface Range {
      * @implSpec Начальное числовое значение не должно быть больше конечного.
      * @since 2.1.0-RC1
      */
-    double from() default -Double.MAX_VALUE;
+    @Contract("-> const") @Range double from() default -Double.MAX_VALUE;
 
     /**
      * Возвращает конечное числовое значение.
@@ -61,6 +61,6 @@ public @interface Range {
      * @implSpec Конечное числовое значение не должно быть меньше начального.
      * @since 2.1.0-RC1
      */
-    double to() default Double.MAX_VALUE;
+    @Contract("-> const") @Range double to() default Double.MAX_VALUE;
 
 }
