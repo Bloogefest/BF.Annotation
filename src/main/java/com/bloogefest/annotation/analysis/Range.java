@@ -33,11 +33,10 @@ package com.bloogefest.annotation.analysis;
 import java.lang.annotation.*;
 
 /**
- * Аннотация контракта метода или конструктора.
+ * Диапазон числовых значений.
  *
- * @apiNote Наличие этой аннотации говорит о том, что поведение метода или конструктора соответствует значению
- * контракта.
- * @since 2.1.0
+ * @apiNote Позволяет задать диапазон числовых значений.
+ * @since 2.1.0-RC1
  */
 @Documented
 @Target({ElementType.PARAMETER, ElementType.TYPE_USE})
@@ -45,20 +44,22 @@ import java.lang.annotation.*;
 public @interface Range {
 
     /**
-     * Возвращает значение контракта.
+     * Возвращает начальное числовое значение.
      *
-     * @return Значение контракта.
+     * @return Начальное числовое значение.
      *
-     * @since 2.1.0
+     * @implSpec Начальное числовое значение не должно быть больше конечного.
+     * @since 2.1.0-RC1
      */
     double from() default -Double.MAX_VALUE;
 
     /**
-     * Возвращает значение контракта.
+     * Возвращает конечное числовое значение.
      *
-     * @return Значение контракта.
+     * @return Конечное числовое значение.
      *
-     * @since 2.1.0
+     * @implSpec Конечное числовое значение не должно быть меньше начального.
+     * @since 2.1.0-RC1
      */
     double to() default Double.MAX_VALUE;
 
