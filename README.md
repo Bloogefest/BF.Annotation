@@ -53,7 +53,7 @@ dependencies {
 <dependency>
   <groupId>com.bloogefest</groupId>
   <artifactId>annotation</artifactId>
-  <version>2.0.0-RC1</version>
+  <version>2.1.0-RC1</version>
 </dependency>
 ```
 
@@ -70,7 +70,7 @@ repositories {
 
 ```kotlin
 dependencies {
-    implementation("com.bloogefest:annotation:2.0.0-RC1")
+    implementation("com.bloogefest:annotation:2.1.0-RC1")
 }
 ```
 
