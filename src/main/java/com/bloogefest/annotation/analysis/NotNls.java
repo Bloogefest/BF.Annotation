@@ -9,10 +9,10 @@ package com.bloogefest.annotation.analysis;
 import java.lang.annotation.*;
 
 /**
- * Аннотация того, что не должно быть локализовано.
+ * Отказ от локализации.
  *
- * @apiNote Наличие этой аннотации у чего-то говорит о том, что оно не должно быть локализовано.
- * @since 1.0.0
+ * @apiNote Позволяет подчеркнуть, что что-то не должно быть локализовано.
+ * @since 1.0.0-RC1
  */
 @Documented
 @Target({ElementType.FIELD, ElementType.PARAMETER, ElementType.LOCAL_VARIABLE, ElementType.TYPE_USE,
