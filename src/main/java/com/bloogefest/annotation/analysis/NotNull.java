@@ -9,10 +9,10 @@ package com.bloogefest.annotation.analysis;
 import java.lang.annotation.*;
 
 /**
- * Аннотация ненулевого значения.
+ * Ненулевое значение.
  *
- * @apiNote Наличие этой аннотации говорит о том, что значение не должно быть нулевым.
- * @since 1.0.0
+ * @apiNote Позволяет подчеркнуть, что значение не должно быть нулевым.
+ * @since 1.0.0-RC1
  */
 @Documented
 @Target({ElementType.FIELD, ElementType.METHOD, ElementType.PARAMETER, ElementType.LOCAL_VARIABLE,
