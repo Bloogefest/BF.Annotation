@@ -4,7 +4,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-package com.bloogefest.annotation.analysis;
+package com.bloogefest.annotation;
 
 import java.lang.annotation.*;
 

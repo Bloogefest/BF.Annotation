@@ -4,18 +4,18 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-package com.bloogefest.annotation.analysis;
+package com.bloogefest.annotation;
 
 import java.lang.annotation.*;
 
 /**
- * Отказ от локализации.
+ * Требование локализации.
  *
- * @apiNote Позволяет подчеркнуть, что что-то не должно быть локализовано.
+ * @apiNote Позволяет подчеркнуть, что что-то должно быть локализовано.
  * @since 1.0.0-RC1
  */
 @Documented
 @Target({ElementType.FIELD, ElementType.PARAMETER, ElementType.LOCAL_VARIABLE, ElementType.TYPE_USE,
          ElementType.RECORD_COMPONENT})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface NotNls {}
+public @interface Nls {}
