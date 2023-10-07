@@ -29,6 +29,6 @@ public @interface Experimental {
      *
      * @since 2.1.0-RC1
      */
-    @Contract("-> const") @NotNls String value() default "";
+    @Contract("-> const") String value() default "";
 
 }

@@ -28,6 +28,6 @@ public @interface Obsolete {
      *
      * @since 1.0.0-RC1
      */
-    @Contract("-> const") @NotNls String value() default "";
+    @Contract("-> const") String value() default "";
 
 }
