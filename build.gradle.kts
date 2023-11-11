@@ -23,8 +23,9 @@ publishing {
                 url = "https://github.com/Bloogefest/BF.Annotation"
                 licenses {
                     license {
-                        name = "Mozilla Public License Version 2.0"
+                        name = "Mozilla Public License 2.0"
                         url = "https://mozilla.org/MPL/2.0/"
+                        distribution = "repo"
                     }
                 }
                 developers {
@@ -32,21 +33,24 @@ publishing {
                         id = "Bloogefest"
                         name = "George Sopin"
                         url = "https://github.com/Bloogefest"
-                        timezone = "W-SU"
+                        timezone = "Europe/Moscow"
                     }
+                }
+                issueManagement {
+                    system = "Github"
+                    url = "https://github.com/Bloogefest/BF.Annotation/issues"
+                }
+                ciManagement {
+                    system = "Github"
+                    url = "https://github.com/Bloogefest/BF.Annotation/actions"
                 }
                 scm {
                     connection = "scm:git:git://github.com/Bloogefest/BF.Annotation.git"
                     developerConnection = "scm:git:ssh://github.com/Bloogefest/BF.Annotation.git"
                     url = "https://github.com/Bloogefest/BF.Annotation"
                 }
-                ciManagement {
-                    system = "Github"
-                    url = "https://github.com/Bloogefest/BF.Annotation/actions"
-                }
-                issueManagement {
-                    system = "Github"
-                    url = "https://github.com/Bloogefest/BF.Annotation/issues"
+                distributionManagement {
+                    downloadUrl = "https://github.com/Bloogefest/BF.Annotation"
                 }
             }
         }
