@@ -101,13 +101,21 @@ implementation("com.bloogefest:annotation:3.0.0-SNAPSHOT")
 
 #### `Contract`
 
-Позволяет кратко описать метод или конструктор, в том числе их аргументы,
-возвращаемое значение, поведение и воздействие на окружение. К примеру:
+Позволяет обобщённо описать метод или конструктор, а точнее их параметры, поведение, влияние на окружение и возвращаемое
+значение. К примеру:
 
 ```java
-@FunctionalInterface
-interface ArgumentCounter {
-    @Contract(value = "[-] -> 0; [!null] -> done; _ -> fail")
-    int count(String... args) throws RuntimeException;
+import java.util.Objects;
+
+interface Counter<T> {
+
+    @Range(from = 0, to = Integer.MAX_VALUE)
+    @Contract(value = "[-] -> 0; [+] -> uint; null -> fail")
+    default int count(@NonNull Iterable<T> iterable) throws NullPointerException {
+        int count = 0;
+        for (final T object : Objects.requireNonNull(iterable)) ++count;
+        return count;
+    }
+
 }
 ```
