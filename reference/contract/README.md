@@ -4,6 +4,7 @@ description: 1.0.0-RC1
 
 # Contract
 
+{% code fullWidth="false" %}
 ```java
 package com.bloogefest.annotation;
 
@@ -12,8 +13,9 @@ package com.bloogefest.annotation;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Contract { ... }
 ```
+{% endcode %}
 
-## Описание
+## Описание <a href="#description" id="description"></a>
 
 Позволяет обобщённо описать метод или конструктор, а точнее их параметры, поведение, влияние на окружение и возвращаемое значение.
 
@@ -29,10 +31,10 @@ public @interface Contract { ... }
 Для того чтобы применение этой аннотации было максимально эффективно, следуйте [рекомендациям по применению](./#rekomendacii-po-primeneniyu).
 {% endhint %}
 
-## Спецификация
+## Спецификация <a href="#specification" id="specification"></a>
 
 Этот раздел находится активной в разработке.
 
-## Рекомендации по применению
+## Рекомендации по применению <a href="#recommendations" id="recommendations"></a>
 
 Этот раздел находится активной в разработке.

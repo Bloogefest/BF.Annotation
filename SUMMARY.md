@@ -1,18 +1,18 @@
 # Table of contents
 
-## Вступление
+## Вступление <a href="#introduction" id="introduction"></a>
 
 * [О проекте](README.md)
-* [Подключение](vstuplenie/podklyuchenie.md)
+* [Подключение](introduction/connection.md)
 
-## Справка
+## Справка <a href="#reference" id="reference"></a>
 
-* [Contract](spravka/contract/README.md)
-  * [value()](spravka/contract/value.md)
-  * [impact()](spravka/contract/impact.md)
-  * [Impact](spravka/contract/impact-1/README.md)
-    * [NONE](spravka/contract/impact-1/none.md)
-    * [SHARED](spravka/contract/impact-1/shared.md)
-    * [INTERNAL](spravka/contract/impact-1/internal.md)
-    * [EXTERNAL](spravka/contract/impact-1/external.md)
-    * [UNDEFINED](spravka/contract/impact-1/undefined.md)
+* [Contract](reference/contract/README.md)
+  * [value()](reference/contract/value.md)
+  * [impact()](reference/contract/impact.md)
+  * [Impact](reference/contract/impact-1/README.md)
+    * [NONE](reference/contract/impact-1/none.md)
+    * [SHARED](reference/contract/impact-1/shared.md)
+    * [INTERNAL](reference/contract/impact-1/internal.md)
+    * [EXTERNAL](reference/contract/impact-1/external.md)
+    * [UNDEFINED](reference/contract/impact-1/undefined.md)

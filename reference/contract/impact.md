@@ -9,7 +9,7 @@ description: 3.0.0-RC1
 @NonNull Impact impact() default Impact.UNDEFINED;
 ```
 
-## Описание
+## Описание <a href="#description" id="description"></a>
 
 Возвращает тип влияния на окружение метода или конструктора.
 
@@ -25,10 +25,10 @@ description: 3.0.0-RC1
 Для того чтобы применение этого параметра было максимально эффективно, следуйте [рекомендациям по применению](impact.md#rekomendacii-po-primeneniyu).
 {% endhint %}
 
-## Спецификация
+## Спецификация <a href="#specification" id="specification"></a>
 
 Этот раздел находится активной в разработке.
 
-## Рекомендации по применению
+## Рекомендации по применению <a href="#recommendations" id="recommendations"></a>
 
 Этот раздел находится активной в разработке.

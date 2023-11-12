@@ -14,9 +14,9 @@ layout:
 
 # Подключение
 
-## Выпуска
+## Выпуска <a href="#release" id="release"></a>
 
-### Maven
+### Maven <a href="#release-maven" id="release-maven"></a>
 
 ```xml
 <repository>
@@ -33,7 +33,7 @@ layout:
 </dependency>
 ```
 
-### Gradle
+### Gradle <a href="#release-gradle" id="release-gradle"></a>
 
 ```kts
 mavenCentral()
@@ -43,9 +43,9 @@ mavenCentral()
 implementation("com.bloogefest:annotation:2.1.0")
 ```
 
-## Выпуск-кандидата
+## Выпуск-кандидата <a href="#release-candidate" id="release-candidate"></a>
 
-### Maven
+### Maven <a href="#release-candidate-maven" id="release-candidate-maven"></a>
 
 ```xml
 <repository>
@@ -62,7 +62,7 @@ implementation("com.bloogefest:annotation:2.1.0")
 </dependency>
 ```
 
-### Gradle
+### Gradle <a href="#release-candidate-gradle" id="release-candidate-gradle"></a>
 
 ```kts
 maven("https://s01.oss.sonatype.org/content/repositories/releases/")
@@ -72,9 +72,9 @@ maven("https://s01.oss.sonatype.org/content/repositories/releases/")
 implementation("com.bloogefest:annotation:2.1.0-RC1")
 ```
 
-## Снимка
+## Снимка <a href="#snapshot" id="snapshot"></a>
 
-### Maven
+### Maven <a href="#snapshot-maven" id="snapshot-maven"></a>
 
 ```xml
 <repository>
@@ -91,7 +91,7 @@ implementation("com.bloogefest:annotation:2.1.0-RC1")
 </dependency>
 ```
 
-### Gradle
+### Gradle <a href="#snapshot-gradle" id="snapshot-gradle"></a>
 
 ```kts
 maven("https://s01.oss.sonatype.org/content/repositories/snapshots/")
