@@ -9,34 +9,55 @@ package com.bloogefest.annotation;
 import java.lang.annotation.*;
 
 /**
- * Диапазон числовых значений.
+ * Позволяет обозначить диапазон числовых значений элемента. Эта аннотация применима к элементам, значение которых
+ * является числовым и лежит в диапазоне между двумя известными числовыми значениями или равняется им.
  *
- * @apiNote Позволяет задать диапазон числовых значений.
+ * @apiNote Эта аннотация активно изменялась, вплоть до выпуск-кандидата 3.0.0-RC1, после чего планируется допускать
+ * лишь небольшие изменения в её документации.
+ * @implSpec Реализация этой аннотации по умолчанию является эталонной, так как она полностью следует <a
+ * href="https://annotation.docs.bloogefest.com/reference/range#specification">спецификации</a>.
+ * @implNote Для того чтобы применение этой аннотации было максимально эффективно, следуйте <a
+ * href="https://annotation.docs.bloogefest.com/reference/range#recommendations">рекомендациям по применению</a>.
+ * @see #from()
+ * @see #to()
  * @since 2.1.0-RC1
  */
 @Documented
-@Target({ElementType.PARAMETER, ElementType.TYPE_USE})
+@Target({ElementType.FIELD, ElementType.METHOD, ElementType.PARAMETER, ElementType.LOCAL_VARIABLE, ElementType.TYPE_USE,
+         ElementType.RECORD_COMPONENT})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Range {
 
     /**
-     * Возвращает начальное числовое значение.
+     * Возвращает минимально возможное числовое значение элемента.
      *
-     * @return Начальное числовое значение.
+     * @return Минимально возможное числовое значение элемента.
      *
-     * @implSpec Начальное числовое значение не должно быть больше конечного.
+     * @apiNote Этот параметр активно изменялся, вплоть до выпуск-кандидата 3.0.0-RC1, после чего планируется допускать
+     * лишь небольшие изменения в его документации.
+     * @implSpec Реализация этого параметра по умолчанию является эталонной, так как она полностью следует <a
+     * href="https://annotation.docs.bloogefest.com/reference/range/from#specification">спецификации</a>.
+     * @implNote Для того чтобы применение этого параметра было максимально эффективно, следуйте <a
+     * href="https://annotation.docs.bloogefest.com/reference/range/from#recommendations">рекомендациям по
+     * применению</a>.
      * @since 2.1.0-RC1
      */
-    @Contract("-> const") @Range double from() default -Double.MAX_VALUE;
+    @Contract("-> double") @Range double from() default -Double.MAX_VALUE;
 
     /**
-     * Возвращает конечное числовое значение.
+     * Возвращает максимально возможное числовое значение элемента.
      *
-     * @return Конечное числовое значение.
+     * @return Максимально возможное числовое значение элемента.
      *
-     * @implSpec Конечное числовое значение не должно быть меньше начального.
+     * @apiNote Этот параметр активно изменялся, вплоть до выпуск-кандидата 3.0.0-RC1, после чего планируется допускать
+     * лишь небольшие изменения в его документации.
+     * @implSpec Реализация этого параметра по умолчанию является эталонной, так как она полностью следует <a
+     * href="https://annotation.docs.bloogefest.com/reference/range/to#specification">спецификации</a>.
+     * @implNote Для того чтобы применение этого параметра было максимально эффективно, следуйте <a
+     * href="https://annotation.docs.bloogefest.com/reference/range/to#recommendations">рекомендациям по
+     * применению</a>.
      * @since 2.1.0-RC1
      */
-    @Contract("-> const") @Range double to() default Double.MAX_VALUE;
+    @Contract("-> double") @Range double to() default Double.MAX_VALUE;
 
 }
