@@ -8,8 +8,8 @@
 ## Справка <a href="#reference" id="reference"></a>
 
 * [Contract](reference/contract/README.md)
-  * [impact()](reference/contract/impact.md)
   * [value()](reference/contract/value.md)
+  * [impact()](reference/contract/impact.md)
   * [Impact](reference/contract/contract-impact/README.md)
     * [NONE](reference/contract/contract-impact/none.md)
     * [SHARED](reference/contract/contract-impact/shared.md)
