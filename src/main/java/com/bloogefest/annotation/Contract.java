@@ -15,10 +15,9 @@ import java.lang.annotation.*;
  * @apiNote Эта аннотация активно изменялась, вплоть до выпуск-кандидата 3.0.0-RC1, после чего планируется допускать
  * лишь небольшие изменения в её документации.
  * @implSpec Реализация этой аннотации по умолчанию является эталонной, так как она полностью следует <a
- * href="https://github.com/Bloogefest/BF.Annotation/wiki/Contract#спецификация">спецификации</a>.
+ * href="https://annotation.docs.bloogefest.com/reference/contract#specification">спецификации</a>.
  * @implNote Для того чтобы применение этой аннотации было максимально эффективно, следуйте <a
- * href="https://github.com/Bloogefest/BF.Annotation/wiki/Contract#рекомендации-по-применению">рекомендациям по
- * применению</a>.
+ * href="https://annotation.docs.bloogefest.com/reference/contract#recommendations">рекомендациям по применению</a>.
  * @see #value()
  * @see #impact()
  * @since 1.0.0-RC1
@@ -36,9 +35,9 @@ public @interface Contract {
      * @apiNote Этот параметр активно изменялся, вплоть до выпуск-кандидата 3.0.0-RC1, после чего планируется допускать
      * лишь небольшие изменения в его документации.
      * @implSpec Реализация этого параметра по умолчанию является эталонной, так как она полностью следует <a
-     * href="https://github.com/Bloogefest/BF.Annotation/wiki/Contract#спецификация">спецификации</a>.
+     * href="https://annotation.docs.bloogefest.com/reference/contract/value#specification">спецификации</a>.
      * @implNote Для того чтобы применение этого параметра было максимально эффективно, следуйте <a
-     * href="https://github.com/Bloogefest/BF.Annotation/wiki/Contract#рекомендации-по-применению">рекомендациям по
+     * href="https://annotation.docs.bloogefest.com/reference/contract/value#recommendations">рекомендациям по
      * применению</a>.
      * @since 1.0.0-RC1
      */
@@ -52,9 +51,9 @@ public @interface Contract {
      * @apiNote Этот параметр введён в выпуск-кандидате 3.0.0-RC1, после чего планируется допускать лишь небольшие
      * изменения в его документации.
      * @implSpec Реализация этого параметра по умолчанию является эталонной, так как она полностью следует <a
-     * href="https://github.com/Bloogefest/BF.Annotation/wiki/Contract#спецификация">спецификации</a>.
+     * href="https://annotation.docs.bloogefest.com/reference/contract/impact#specification">спецификации</a>.
      * @implNote Для того чтобы применение этого параметра было максимально эффективно, следуйте <a
-     * href="https://github.com/Bloogefest/BF.Annotation/wiki/Contract#рекомендации-по-применению">рекомендациям по
+     * href="https://annotation.docs.bloogefest.com/reference/contract/impact#recommendations">рекомендациям по
      * применению</a>.
      * @see Impact
      * @since 3.0.0-RC1
@@ -67,9 +66,9 @@ public @interface Contract {
      * @apiNote Это перечисление введено в выпуск-кандидате 3.0.0-RC1, после чего планируется допускать лишь небольшие
      * изменения в её документации.
      * @implSpec Реализация этого перечисления по умолчанию является эталонной, так как она полностью следует <a
-     * href="https://github.com/Bloogefest/BF.Annotation/wiki/Contract#спецификация">спецификации</a>.
+     * href="https://annotation.docs.bloogefest.com/reference/contract/contract-impact#specification">спецификации</a>.
      * @implNote Для того чтобы применение этого перечисления было максимально эффективно, следуйте <a
-     * href="https://github.com/Bloogefest/BF.Annotation/wiki/Contract#рекомендации-по-применению">рекомендациям по
+     * href="https://annotation.docs.bloogefest.com/reference/contract/contract-impact#recommendations">рекомендациям по
      * применению</a>.
      * @since 3.0.0-RC1
      */
@@ -81,8 +80,8 @@ public @interface Contract {
          * @apiNote Это значение введено в выпуск-кандидате 3.0.0-RC1, после чего планируется допускать лишь небольшие
          * изменения в его документации.
          * @implNote Для того чтобы применение этого значения было максимально эффективно, следуйте <a
-         * href="https://github.com/Bloogefest/BF.Annotation/wiki/Contract#рекомендации-по-применению">рекомендациям по
-         * применению</a>.
+         * href="https://annotation.docs.bloogefest.com/reference/contract/contract-impact/none#recommendations">рекомендациям
+         * по применению</a>.
          * @since 3.0.0-RC1
          */
         NONE,
@@ -93,8 +92,8 @@ public @interface Contract {
          * @apiNote Это значение введено в выпуск-кандидате 3.0.0-RC1, после чего планируется допускать лишь небольшие
          * изменения в его документации.
          * @implNote Для того чтобы применение этого значения было максимально эффективно, следуйте <a
-         * href="https://github.com/Bloogefest/BF.Annotation/wiki/Contract#рекомендации-по-применению">рекомендациям по
-         * применению</a>.
+         * href="https://annotation.docs.bloogefest.com/reference/contract/contract-impact/shared#recommendations">рекомендациям
+         * по применению</a>.
          * @since 3.0.0-RC1
          */
         SHARED,
@@ -105,8 +104,8 @@ public @interface Contract {
          * @apiNote Это значение введено в выпуск-кандидате 3.0.0-RC1, после чего планируется допускать лишь небольшие
          * изменения в его документации.
          * @implNote Для того чтобы применение этого значения было максимально эффективно, следуйте <a
-         * href="https://github.com/Bloogefest/BF.Annotation/wiki/Contract#рекомендации-по-применению">рекомендациям по
-         * применению</a>.
+         * href="https://annotation.docs.bloogefest.com/reference/contract/contract-impact/internal#recommendations">рекомендациям
+         * по применению</a>.
          * @since 3.0.0-RC1
          */
         INTERNAL,
@@ -117,8 +116,8 @@ public @interface Contract {
          * @apiNote Это значение введено в выпуск-кандидате 3.0.0-RC1, после чего планируется допускать лишь небольшие
          * изменения в его документации.
          * @implNote Для того чтобы применение этого значения было максимально эффективно, следуйте <a
-         * href="https://github.com/Bloogefest/BF.Annotation/wiki/Contract#рекомендации-по-применению">рекомендациям по
-         * применению</a>.
+         * href="https://annotation.docs.bloogefest.com/reference/contract/contract-impact/external#recommendations">рекомендациям
+         * по применению</a>.
          * @since 3.0.0-RC1
          */
         EXTERNAL,
@@ -129,8 +128,8 @@ public @interface Contract {
          * @apiNote Это значение введено в выпуск-кандидате 3.0.0-RC1, после чего планируется допускать лишь небольшие
          * изменения в его документации.
          * @implNote Для того чтобы применение этого значения было максимально эффективно, следуйте <a
-         * href="https://github.com/Bloogefest/BF.Annotation/wiki/Contract#рекомендации-по-применению">рекомендациям по
-         * применению</a>.
+         * href="https://annotation.docs.bloogefest.com/reference/contract/contract-impact/undefined#recommendations">рекомендациям
+         * по применению</a>.
          * @since 3.0.0-RC1
          */
         UNDEFINED
