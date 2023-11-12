@@ -20,6 +20,7 @@ import java.lang.annotation.*;
  * href="https://annotation.docs.bloogefest.com/reference/contract#recommendations">рекомендациям по применению</a>.
  * @see #value()
  * @see #impact()
+ * @see Impact
  * @since 1.0.0-RC1
  */
 @Documented
