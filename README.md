@@ -6,13 +6,24 @@
 ### Описание
 
 `BF.Annotation` — это библиотека аннотаций общего назначения. Она предоставляет аннотации преимущественно для других
-библиотек, к примеру, `Contract`, `NonNull`, `Null` и `Nullable`.
+библиотек, например: `Contract`, `NonNull`, `Null` и `Nullable`.
+
+### Область применения
+
+Эта библиотека может пригодиться для аннотирования другой библиотеки, тем самым повышая скорость и удобство
+взаимодействия с ней. Однако, её также можно использовать для аннотирования других проектов, если в них, к примеру, есть
+внутренний API.
+
+### Требования к проекту
+
+Эта библиотека написана и скомпилирована с использованием [Amazon Corretto 17](https://aws.amazon.com/corretto), поэтому
+подключать её можно только к проектам на основе Java SE 17 или выше.
 
 ### Подключение
 
 #### Выпуска
 
-С помощью `Maven`.
+##### Maven
 
 ```xml
 <repository>
@@ -29,7 +40,7 @@
 </dependency>
 ```
 
-С помощью `Gradle`.
+##### Gradle
 
 ```kotlin
 mavenCentral()
@@ -41,7 +52,7 @@ implementation("com.bloogefest:annotation:2.1.0")
 
 #### Выпуск-кандидата
 
-С помощью `Maven`.
+##### Maven
 
 ```xml
 <repository>
@@ -58,7 +69,7 @@ implementation("com.bloogefest:annotation:2.1.0")
 </dependency>
 ```
 
-С помощью `Gradle`.
+##### Gradle
 
 ```kotlin
 maven("https://s01.oss.sonatype.org/content/repositories/releases/")
@@ -70,7 +81,7 @@ implementation("com.bloogefest:annotation:2.1.0-RC1")
 
 #### Снимка
 
-С помощью `Maven`.
+##### Maven
 
 ```xml
 <repository>
@@ -87,7 +98,7 @@ implementation("com.bloogefest:annotation:2.1.0-RC1")
 </dependency>
 ```
 
-C помощью `Gradle`.
+##### Gradle
 
 ```kotlin
 maven("https://s01.oss.sonatype.org/content/repositories/snapshots/")
@@ -102,18 +113,19 @@ implementation("com.bloogefest:annotation:3.0.0-SNAPSHOT")
 #### `Contract`
 
 Позволяет обобщённо описать метод или конструктор, а точнее их параметры, поведение, влияние на окружение и возвращаемое
-значение. К примеру:
+значение, например:
 
 ```java
+import java.util.Iterator;
 import java.util.Objects;
 
 interface Counter<T> {
 
     @Range(from = 0, to = Integer.MAX_VALUE)
     @Contract(value = "[-] -> 0; [+] -> uint; null -> fail")
-    default int count(@NonNull Iterable<T> iterable) throws NullPointerException {
+    default int count(final @NonNull Iterator<T> iterator) throws NullPointerException {
         int count = 0;
-        for (final T object : Objects.requireNonNull(iterable)) ++count;
+        for (; iterator.hasNext(); iterator.next()) ++count;
         return count;
     }
 
