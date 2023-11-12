@@ -8,11 +8,11 @@
 ## Справка <a href="#reference" id="reference"></a>
 
 * [Contract](reference/contract/README.md)
-  * [value()](reference/contract/value.md)
   * [impact()](reference/contract/impact.md)
-  * [Impact](reference/contract/impact-1/README.md)
-    * [NONE](reference/contract/impact-1/none.md)
-    * [SHARED](reference/contract/impact-1/shared.md)
-    * [INTERNAL](reference/contract/impact-1/internal.md)
-    * [EXTERNAL](reference/contract/impact-1/external.md)
-    * [UNDEFINED](reference/contract/impact-1/undefined.md)
+  * [value()](reference/contract/value.md)
+  * [Impact](reference/contract/contract-impact/README.md)
+    * [NONE](reference/contract/contract-impact/none.md)
+    * [SHARED](reference/contract/contract-impact/shared.md)
+    * [INTERNAL](reference/contract/contract-impact/internal.md)
+    * [EXTERNAL](reference/contract/contract-impact/external.md)
+    * [UNDEFINED](reference/contract/contract-impact/undefined.md)
