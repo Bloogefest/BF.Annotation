@@ -1,21 +1,27 @@
-# Welcome!
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
 
-## Welcome to MyAPI
+# О проекте
 
-Welcome to MyAPI! Here you'll find all the documentation you need to get up and running with the MyAPI API.
+## Описание
 
-## Want to jump right in?
+`BF.Annotation` — это библиотека аннотаций общего назначения. Она предоставляет аннотации преимущественно для других библиотек, например: `Contract`, `NonNull`, `Null` и `Nullable`.
 
-Feeling like an eager beaver? Jump in to the quick start docs and get making your first request:
+## Область применения
 
-{% content-ref url="quick-start.md" %}
-[quick-start.md](quick-start.md)
-{% endcontent-ref %}
+Эта библиотека может пригодится для аннотирования другой библиотеки, тем самым повышая скорость и удобство взаимодействия с ней. Однако, её также можно использовать для аннотирования других проектов, если в них, к примеру, есть внутренний API.
 
-## Want to deep dive?
+## Требования к проекту
 
-Dive a little deeper and start exploring our API reference to get an idea of everything that's possible with the API:
-
-{% content-ref url="reference/api-reference/" %}
-[api-reference](reference/api-reference/)
-{% endcontent-ref %}
+Эта библиотека написана и скомпилирована с использованием [Amazon Corretto 17](https://aws.amazon.com/corretto), поэтому подключать её можно только к проектам на основе Java SE 17 или выше.
