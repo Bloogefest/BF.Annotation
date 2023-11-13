@@ -2,7 +2,7 @@
 description: 3.0.0-RC1
 ---
 
-# UNDEFINED
+# Contract.Impact.UNDEFINED
 
 ## Описание <a href="#description" id="description"></a>
 
@@ -13,7 +13,7 @@ description: 3.0.0-RC1
 {% endhint %}
 
 {% hint style="warning" %}
-Для того чтобы применение этого значения было максимально эффективно, следуйте [рекомендациям по применению](undefined.md#rekomendacii-po-primeneniyu).
+Для того чтобы применение этого значения было максимально эффективно, следуйте [рекомендациям по применению](undefined.md#recommendations).
 {% endhint %}
 
 ## Рекомендации по применению <a href="#recommendations" id="recommendations"></a>

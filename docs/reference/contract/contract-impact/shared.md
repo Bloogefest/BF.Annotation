@@ -2,7 +2,7 @@
 description: 3.0.0-RC1
 ---
 
-# SHARED
+# Contract.Impact.SHARED
 
 ## Описание <a href="#description" id="description"></a>
 
@@ -13,7 +13,7 @@ description: 3.0.0-RC1
 {% endhint %}
 
 {% hint style="warning" %}
-Для того чтобы применение этого значения было максимально эффективно, следуйте [рекомендациям по применению](shared.md#rekomendacii-po-primeneniyu).
+Для того чтобы применение этого значения было максимально эффективно, следуйте [рекомендациям по применению](shared.md#recommendations).
 {% endhint %}
 
 ## Рекомендации по применению <a href="#recommendations" id="recommendations"></a>
