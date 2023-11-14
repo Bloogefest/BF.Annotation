@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.bloogefest"
-version = "3.0.0-RC1"
+version = "3.0.0-SNAPSHOT"
 description = "Библиотека аннотаций общего назначения."
 
 repositories {
