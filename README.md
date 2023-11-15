@@ -36,7 +36,7 @@
 <dependency>
   <groupId>com.bloogefest</groupId>
   <artifactId>annotation</artifactId>
-  <version>2.1.0</version>
+  <version>3.0.0</version>
 </dependency>
 ```
 
@@ -47,7 +47,7 @@ mavenCentral()
 ```
 
 ```kotlin
-implementation("com.bloogefest:annotation:2.1.0")
+implementation("com.bloogefest:annotation:3.0.0")
 ```
 
 #### Выпуск-кандидата
