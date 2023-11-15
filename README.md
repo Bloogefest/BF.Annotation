@@ -107,27 +107,3 @@ maven("https://s01.oss.sonatype.org/content/repositories/snapshots/")
 ```kotlin
 implementation("com.bloogefest:annotation:3.0.0-SNAPSHOT")
 ```
-
-### Краткий обзор
-
-#### `Contract`
-
-Позволяет обобщённо описать метод или конструктор, а точнее их параметры, поведение, влияние на окружение и возвращаемое
-значение, например:
-
-```java
-import java.util.Iterator;
-import java.util.Objects;
-
-interface Counter<T> {
-
-    @Range(from = 0, to = Integer.MAX_VALUE)
-    @Contract(value = "[-] -> 0; [+] -> uint; null -> fail")
-    default int count(final @NonNull Iterator<T> iterator) throws NullPointerException {
-        int count = 0;
-        for (; iterator.hasNext(); iterator.next()) ++count;
-        return count;
-    }
-
-}
-```
