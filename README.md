@@ -65,7 +65,7 @@ implementation("com.bloogefest:annotation:2.1.0")
 <dependency>
   <groupId>com.bloogefest</groupId>
   <artifactId>annotation</artifactId>
-  <version>3.0.0-RC1</version>
+  <version>3.0.0-RC2</version>
 </dependency>
 ```
 
@@ -76,7 +76,7 @@ maven("https://s01.oss.sonatype.org/content/repositories/releases/")
 ```
 
 ```kotlin
-implementation("com.bloogefest:annotation:3.0.0-RC1")
+implementation("com.bloogefest:annotation:3.0.0-RC2")
 ```
 
 #### Снимка
