@@ -25,7 +25,7 @@ jobs:
       - name: Подготовка JDK
         uses: actions/setup-java@v3
         with:
-          java-version: 17
+          java-version: 21
           distribution: corretto
       - name: Сборка и тестирование проекта
         uses: gradle/gradle-build-action@v2
@@ -41,7 +41,7 @@ jobs:
       - name: Подготовка JDK
         uses: actions/setup-java@v3
         with:
-          java-version: 17
+          java-version: 21
           distribution: corretto
       - name: Сборка и публикация проекта
         uses: gradle/gradle-build-action@v2

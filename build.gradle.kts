@@ -88,6 +88,8 @@ java {
 
 tasks.compileJava {
     options.encoding = "UTF-8"
+    sourceCompatibility = JavaVersion.VERSION_21.toString()
+    targetCompatibility = JavaVersion.VERSION_21.toString()
 }
 
 tasks.javadoc {
