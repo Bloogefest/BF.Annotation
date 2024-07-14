@@ -6,18 +6,16 @@
 
 package com.bloogefest.annotation;
 
-import java.lang.annotation.*;
+import java.lang.annotation.Documented;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 
 /**
- * Позволяет обобщённо описать метод или конструктор, а точнее их параметры, поведение, влияние на окружение и
- * возвращаемое значение.
+ * Позволяет обобщённо описать метод или конструктор. Вы можете определить, как метод или конструктор ведут себя при
+ * определённых параметрах, как влияют на окружение, что возвращают.
  *
- * @apiNote Эта аннотация активно изменялась, вплоть до выпуск-кандидата 3.0.0-RC1, после чего планируется допускать
- * лишь небольшие изменения в её документации.
- * @implSpec Реализация этой аннотации по умолчанию является эталонной, так как она полностью следует <a
- * href="https://annotation.docs.bloogefest.com/reference/contract#specification">спецификации</a>.
- * @implNote Для того чтобы применение этой аннотации было максимально эффективно, следуйте <a
- * href="https://annotation.docs.bloogefest.com/reference/contract#recommendations">рекомендациям по применению</a>.
  * @see #value()
  * @see #impact()
  * @see Impact
@@ -25,112 +23,65 @@ import java.lang.annotation.*;
  */
 @Documented
 @Target({ElementType.METHOD, ElementType.CONSTRUCTOR})
-@Retention(RetentionPolicy.RUNTIME)
+@Retention(RetentionPolicy.SOURCE)
 public @interface Contract {
 
     /**
-     * Возвращает обобщённое описание параметров, поведения и возвращаемого значения метода или конструктора.
+     * @return Обобщённое, соответствующее <a
+     * href="https://annotation.docs.bloogefest.com/reference/contract#value">официальной спецификации</a> описание
+     * метода или конструктора.
      *
-     * @return Обобщённое описание параметров, поведения и возвращаемого значения метода или конструктора.
-     *
-     * @apiNote Этот параметр активно изменялся, вплоть до выпуск-кандидата 3.0.0-RC1, после чего планируется допускать
-     * лишь небольшие изменения в его документации.
-     * @implSpec Реализация этого параметра по умолчанию является эталонной, так как она полностью следует <a
-     * href="https://annotation.docs.bloogefest.com/reference/contract/value#specification">спецификации</a>.
-     * @implNote Для того чтобы применение этого параметра было максимально эффективно, следуйте <a
-     * href="https://annotation.docs.bloogefest.com/reference/contract/value#recommendations">рекомендациям по
-     * применению</a>.
      * @since 1.0.0-RC1
      */
-    @Contract("-> !null") @NonNull String value() default "";
+    @Contract(value = "-> const", impact = Impact.NONE) @NonNull String value() default "";
 
     /**
-     * Возвращает тип влияния на окружение метода или конструктора.
+     * @return Соответствующее <a href="https://annotation.docs.bloogefest.com/reference/contract#impact">официальной
+     * спецификации</a> влияние метода или конструктора на окружение.
      *
-     * @return Тип влияния на окружение метода или конструктора.
-     *
-     * @apiNote Этот параметр был введён в выпуск-кандидате 3.0.0-RC1, после чего планируется допускать лишь небольшие
-     * изменения в его документации.
-     * @implSpec Реализация этого параметра по умолчанию является эталонной, так как она полностью следует <a
-     * href="https://annotation.docs.bloogefest.com/reference/contract/impact#specification">спецификации</a>.
-     * @implNote Для того чтобы применение этого параметра было максимально эффективно, следуйте <a
-     * href="https://annotation.docs.bloogefest.com/reference/contract/impact#recommendations">рекомендациям по
-     * применению</a>.
      * @see Impact
      * @since 3.0.0-RC1
      */
-    @Contract("-> !null") @NonNull Impact impact() default Impact.UNDEFINED;
+    @Contract(value = "-> const", impact = Impact.NONE) @NonNull Impact impact() default Impact.UNDEFINED;
 
     /**
-     * Типы влияния на окружение.
+     * Влияние метода или конструктора на окружение.
      *
-     * @apiNote Это перечисление было введено в выпуск-кандидате 3.0.0-RC1, после чего планируется допускать лишь
-     * небольшие изменения в его документации.
-     * @implSpec Реализация этого перечисления по умолчанию является эталонной, так как она полностью следует <a
-     * href="https://annotation.docs.bloogefest.com/reference/contract/contract-impact#specification">спецификации</a>.
-     * @implNote Для того чтобы применение этого перечисления было максимально эффективно, следуйте <a
-     * href="https://annotation.docs.bloogefest.com/reference/contract/contract-impact#recommendations">рекомендациям по
-     * применению</a>.
      * @since 3.0.0-RC1
      */
     enum Impact {
 
         /**
-         * Отсутствие влияния на окружение.
+         * Отсутствие влияния метода или конструктора на окружение.
          *
-         * @apiNote Это значение было введено в выпуск-кандидате 3.0.0-RC1, после чего планируется допускать лишь
-         * небольшие изменения в его документации.
-         * @implNote Для того чтобы применение этого значения было максимально эффективно, следуйте <a
-         * href="https://annotation.docs.bloogefest.com/reference/contract/contract-impact/none#recommendations">рекомендациям
-         * по применению</a>.
          * @since 3.0.0-RC1
          */
         NONE,
 
         /**
-         * Влияние на внутреннее и внешнее окружение.
+         * Влияние метода или конструктора на внутреннее и внешнее окружения.
          *
-         * @apiNote Это значение было введено в выпуск-кандидате 3.0.0-RC1, после чего планируется допускать лишь
-         * небольшие изменения в его документации.
-         * @implNote Для того чтобы применение этого значения было максимально эффективно, следуйте <a
-         * href="https://annotation.docs.bloogefest.com/reference/contract/contract-impact/shared#recommendations">рекомендациям
-         * по применению</a>.
          * @since 3.0.0-RC1
          */
         SHARED,
 
         /**
-         * Влияние на внутреннее окружение.
+         * Влияние метода или конструктора на внутреннее окружение.
          *
-         * @apiNote Это значение было введено в выпуск-кандидате 3.0.0-RC1, после чего планируется допускать лишь
-         * небольшие изменения в его документации.
-         * @implNote Для того чтобы применение этого значения было максимально эффективно, следуйте <a
-         * href="https://annotation.docs.bloogefest.com/reference/contract/contract-impact/internal#recommendations">рекомендациям
-         * по применению</a>.
          * @since 3.0.0-RC1
          */
         INTERNAL,
 
         /**
-         * Влияние на внешнее окружение.
+         * Влияние метода или конструктора на внешнее окружение.
          *
-         * @apiNote Это значение было введено в выпуск-кандидате 3.0.0-RC1, после чего планируется допускать лишь
-         * небольшие изменения в его документации.
-         * @implNote Для того чтобы применение этого значения было максимально эффективно, следуйте <a
-         * href="https://annotation.docs.bloogefest.com/reference/contract/contract-impact/external#recommendations">рекомендациям
-         * по применению</a>.
          * @since 3.0.0-RC1
          */
         EXTERNAL,
 
         /**
-         * Неопределённое влияние на окружение.
+         * Неопределённое влияние метода или конструктора на окружение.
          *
-         * @apiNote Это значение было введено в выпуск-кандидате 3.0.0-RC1, после чего планируется допускать лишь
-         * небольшие изменения в его документации.
-         * @implNote Для того чтобы применение этого значения было максимально эффективно, следуйте <a
-         * href="https://annotation.docs.bloogefest.com/reference/contract/contract-impact/undefined#recommendations">рекомендациям
-         * по применению</a>.
          * @since 3.0.0-RC1
          */
         UNDEFINED
