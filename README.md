@@ -3,21 +3,11 @@
 [![RELEASE](https://img.shields.io/github/v/release/Bloogefest/BF.Annotation?style=for-the-badge)](https://github.com/Bloogefest/BF.Annotation/releases/latest)
 [![CI/CD](https://img.shields.io/github/actions/workflow/status/Bloogefest/BF.Annotation/master.yml?label=CI%2FCD&style=for-the-badge)](https://github.com/Bloogefest/BF.Annotation/actions/workflows/master.yml)
 
-### Описание
+Представляет собой библиотеку аннотаций общего назначения, которые могут пригодиться в любом проекте. Вы можете серьёзно
+повысить читаемость кода, если будете следовать [официальной документации](https://annotation.docs.bloogefest.com).
 
-`BF.Annotation` — это библиотека аннотаций общего назначения. Она предоставляет аннотации преимущественно для других
-библиотек, например: `Contract`, `NonNull`, `Null` и `Nullable`.
-
-### Область применения
-
-Эта библиотека может пригодиться для аннотирования другой библиотеки, тем самым повышая скорость и удобство
-взаимодействия с ней. Однако, её также можно использовать для аннотирования других проектов, если в них, к примеру, есть
-внутренний API.
-
-### Требования к проекту
-
-Эта библиотека написана и скомпилирована с использованием [Amazon Corretto 17](https://aws.amazon.com/corretto), поэтому
-подключать её можно только к проектам на основе Java SE 17 или выше.
+Для корректной работы требуется Java SE 21 или выше. При написании исходного кода и компиляции общедоступных снимков,
+выпуск-кандидатов, выпусков используется [Eclipse Temurin](https://adoptium.net/temurin/).
 
 ### Подключение
 
