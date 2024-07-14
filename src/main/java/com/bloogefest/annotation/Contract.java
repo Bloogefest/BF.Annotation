@@ -28,15 +28,15 @@ public @interface Contract {
 
     /**
      * @return Обобщённое, соответствующее <a
-     * href="https://annotation.docs.bloogefest.com/reference/contract#value">официальной спецификации</a> описание
-     * метода или конструктора.
+     * href="https://annotation.docs.bloogefest.com/spec/contract#value">официальной спецификации</a> описание метода
+     * или конструктора.
      *
      * @since 1.0.0-RC1
      */
     @Contract(value = "-> const", impact = Impact.NONE) @NonNull String value() default "";
 
     /**
-     * @return Соответствующее <a href="https://annotation.docs.bloogefest.com/reference/contract#impact">официальной
+     * @return Соответствующее <a href="https://annotation.docs.bloogefest.com/spec/contract#impact">официальной
      * спецификации</a> влияние метода или конструктора на окружение.
      *
      * @see Impact
