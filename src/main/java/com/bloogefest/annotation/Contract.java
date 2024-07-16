@@ -13,8 +13,8 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Позволяет обобщённо описать метод или конструктор. Вы можете определить, как метод или конструктор ведут себя при
- * определённых параметрах, как влияют на окружение, что возвращают.
+ * Позволяет описать метод или конструктор. Вы можете определить, как метод или конструктор ведёт себя при определённых
+ * параметрах, как влияет на окружение, что возвращает.
  *
  * @see #value()
  * @see #impact()
@@ -27,9 +27,8 @@ import java.lang.annotation.Target;
 public @interface Contract {
 
     /**
-     * @return Обобщённое, соответствующее <a
-     * href="https://annotation.docs.bloogefest.com/spec/contract#value">официальной спецификации</a> описание метода
-     * или конструктора.
+     * @return Соответствующее <a href="https://annotation.docs.bloogefest.com/spec/contract#value">официальной
+     * спецификации</a> описание метода или конструктора.
      *
      * @since 1.0.0-RC1
      */
